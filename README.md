@@ -1,2 +1,2 @@
-# tarot-reader
+# Tarot Reader
 Lector de tarot
