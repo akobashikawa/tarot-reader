@@ -1,4 +1,4 @@
 # Tarot Reader
 Lector de tarot
 
-[Demo](https://akobashikawa.github.io/tarot-reader/)
+<a href="https://akobashikawa.github.io/tarot-reader/" target="_blank">Demo</a>
