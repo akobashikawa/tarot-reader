@@ -16,7 +16,7 @@ const Component = {
       <h2>Cartas</h2>
 
       <b-row>
-        <b-col md="3" v-for="card of cards">
+        <b-col md="4" v-for="card of cards">
           <b-card
             :title="card.order + ': ' + card.title"
             :img-src="card.imageSrc"
