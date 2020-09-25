@@ -9,22 +9,28 @@ const Component = {
     };
   },
 
+  methods: {
+  },
+
   template: `<div>
     <b-container>
-      <h1>Tarot Reader</h1>
-
-      <h2>Cartas</h2>
 
       <b-row>
         <b-col md="4" v-for="card of cards">
           <b-card
-            :title="card.order + ': ' + card.title"
-            :img-src="card.imageSrc"
             :img-alt="card.title"
-            img-top
-            class="shadow mb-2"
+            no-body
+            class="shadow mt-3"
           >
-            <b-card-text>{{ card.description }}</b-card-text>
+            <b-card-body>
+              <div>
+                <b-card-img :src="card.imageSrc"></b-card-img>
+              </div>
+              <div>
+                <b-card-title class="text-center">{{ card.order }} {{ card.title }}</b-card-title>
+                <b-card-text class="text-center">{{ card.description }}</b-card-text>
+              </div>
+            </b-card-body>
           </b-card>
         </b-col>
       </b-row>
