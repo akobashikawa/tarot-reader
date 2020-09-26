@@ -16,21 +16,29 @@ const Component = {
     <b-container>
 
       <b-row>
-        <b-col md="4" v-for="card of cards">
+        <b-col md="4" v-for="card of cards" style="display: flex;">
           <b-card
-            :img-alt="card.title"
             no-body
+            overlay
             class="shadow mt-3"
           >
-            <b-card-body>
-              <div>
-                <b-card-img :src="card.imageSrc"></b-card-img>
-              </div>
-              <div>
-                <b-card-title class="text-center">{{ card.order }} {{ card.title }}</b-card-title>
-                <b-card-text class="text-center">{{ card.description }}</b-card-text>
-              </div>
-            </b-card-body>
+            <b-tabs card fill>
+              <b-tab no-body title="Carta">
+                <b-card-body>
+                  <div>
+                    <b-card-img :src="card.imageSrc" :alt="card.title"></b-card-img>
+                  </div>
+                </b-card-body>
+              </b-tab>
+              <b-tab no-body title="Descripción">
+                <b-card-body>
+                  <div>
+                    <b-card-title class="text-center">{{ card.order }} <br> {{ card.title }}</b-card-title>
+                    <b-card-text class="text-center">{{ card.description }}</b-card-text>
+                  </div>
+                </b-card-body>
+              </b-tab>
+            </b-tabs>
           </b-card>
         </b-col>
       </b-row>
