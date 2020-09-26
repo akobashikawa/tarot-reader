@@ -23,19 +23,15 @@ const Component = {
           >
             <b-tabs card fill>
               <b-tab no-body title="Carta">
-                <b-card-body>
-                  <div>
-                    <b-card-img :src="card.imageSrc" :alt="card.title"></b-card-img>
-                  </div>
-                </b-card-body>
+                <div>
+                  <b-card-img :src="card.imageSrc" :alt="card.title"></b-card-img>
+                </div>
               </b-tab>
-              <b-tab no-body title="Descripción">
-                <b-card-body>
-                  <div>
-                    <b-card-title class="text-center">{{ card.order }} <br> {{ card.title }}</b-card-title>
-                    <b-card-text class="text-center">{{ card.description }}</b-card-text>
-                  </div>
-                </b-card-body>
+              <b-tab title="Descripción">
+                <div>
+                  <b-card-title class="text-center">{{ card.order }} <br> {{ card.title }}</b-card-title>
+                  <b-card-text class="text-center">{{ card.description }}</b-card-text>
+                </div>
               </b-tab>
             </b-tabs>
           </b-card>
