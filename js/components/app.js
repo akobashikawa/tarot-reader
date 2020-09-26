@@ -19,7 +19,6 @@ const Component = {
         <b-col md="4" v-for="card of cards" style="display: flex;">
           <b-card
             no-body
-            overlay
             class="shadow mt-3"
           >
             <b-tabs card fill>
