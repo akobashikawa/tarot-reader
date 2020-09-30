@@ -3,7 +3,7 @@
 }
 
 [v-cloak]::before {
-  content: "..."
+  content: "♣️♠️♥️♦️"
 }
 
 .card-back img.card-img {
