@@ -21,7 +21,7 @@ const Component = {
             no-body
             class="shadow mt-3"
           >
-            <b-tabs card fill>
+            <b-tabs card fill no-fade>
               <b-tab no-body title="Carta">
                 <div>
                   <b-card-img :src="card.imageSrc" :alt="card.title"></b-card-img>
