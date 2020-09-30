@@ -1,0 +1,11 @@
+[v-cloak]>* {
+  display: none
+}
+
+[v-cloak]::before {
+  content: "..."
+}
+
+.card-back img.card-img {
+  opacity: 0.1;
+}

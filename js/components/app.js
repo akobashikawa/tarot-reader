@@ -27,11 +27,19 @@ const Component = {
                   <b-card-img :src="card.imageSrc" :alt="card.title"></b-card-img>
                 </div>
               </b-tab>
-              <b-tab title="Descripción">
-                <div>
-                  <b-card-title class="text-center">{{ card.order }} <br> {{ card.title }}</b-card-title>
-                  <b-card-text class="text-center">{{ card.description }}</b-card-text>
-                </div>
+              <b-tab no-body title="Descripción">
+                <b-card
+                  overlay
+                  :img-src="card.imageSrc"
+                  :img-alt="card.title"
+                  class="card-back"
+                >
+                  <div class="text-center">
+                    <b-card-title> {{ card.order }} </b-card-title>
+                    <b-card-sub-title> {{ card.title }} </b-card-sub-title>
+                    <b-card-text> {{ card.description }} </b-card-text>
+                  </div>
+                </b-card>
               </b-tab>
             </b-tabs>
           </b-card>
