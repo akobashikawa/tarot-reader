@@ -153,6 +153,37 @@ const Deck = [
       description: `Un círculo que representa que el ciclo está completo.`,
       tags: ['mayor'],
     },
+
+    {
+      order: 1,
+      title: 'As de Bastos',
+      imageSrc: 'img/wands01.jpg',
+      description: `El inicio de un nuevo proyecto creativo o energía creativa que empieza a ser llevada hacia otro proyecto.`,
+      tags: ['bastos'],
+    },
+    {
+      order: 1,
+      title: 'As de Espadas',
+      imageSrc: 'img/swords01.jpg',
+      description: `No sólo un comienzo, sino uno que se perfila como una victoria, o como
+sobreponerse a algo.`,
+      tags: ['espadas'],
+    },
+    {
+      order: 1,
+      title: 'As de Copas',
+      imageSrc: 'img/cups01.jpg',
+      description: `Un inicio emocional. Notar que es un UNO no un dos. Tiene que ver más con sólo el consultante que con una relación.`,
+      tags: ['copas'],
+    },
+    {
+      order: 1,
+      title: 'As de Oros',
+      imageSrc: 'img/pents01.jpg',
+      description: `Un nuevo ingreso o un nuevo trabajo. Algo con nuevo dinero o bienes materiales.
+Muestra un fantástico tiempo para ir a buscar trabajo.`,
+      tags: ['oros'],
+    },
   ];
 
 export default Deck;

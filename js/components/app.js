@@ -1,11 +1,8 @@
-import Deck from './deck-01.js';
-
 const Component = {
   name: 'app',
 
   data() {
     return {
-      cards: Deck,
     };
   },
 
@@ -13,45 +10,49 @@ const Component = {
   },
 
   template: `<div>
-    <b-container>
+    <header>
+      <b-navbar toggleable="lg" type="light" variant="light" fixed="top">
+        <b-navbar-brand href="#">
+          <b-button variant="secondary" v-b-toggle.sidebar-menu>Tarot Reader</b-button>
+        </b-navbar-brand>
 
-      <b-row>
-        <b-col md="4" v-for="card of cards" style="display: flex;">
-          <b-card
-            no-body
-            class="shadow mt-3"
-          >
-            <b-tabs card fill no-fade>
-              <b-tab no-body title="Carta">
-                <div>
-                  <b-card-img :src="card.imageSrc" :alt="card.title"></b-card-img>
-                </div>
-              </b-tab>
-              <b-tab no-body title="Descripción">
-                <b-card
-                  overlay
-                  :img-src="card.imageSrc"
-                  :img-alt="card.title"
-                  class="card-back"
-                >
-                  <div class="text-center">
-                    <b-card-title> {{ card.order }} </b-card-title>
-                    <b-card-sub-title> {{ card.title }} </b-card-sub-title>
-                    <b-card-text> {{ card.description }} </b-card-text>
-                  </div>
-                </b-card>
-              </b-tab>
-            </b-tabs>
-          </b-card>
-        </b-col>
-      </b-row>
+        <b-sidebar id="sidebar-menu" title="Menú" bg-variant="light" text-variant="dark" backdrop shadow>
+          <nav class="mb-3">
+            <b-nav vertical>
+              <b-nav-item route to="/">Inicio</b-nav-item>
+              <b-nav-item route to="/cartas">Cartas</b-nav-item>
+              
+              <div style="border-bottom: 1px solid #abe;"></div>
+              <b-nav-item route to="/configuracion">Configuración</b-nav-item>
+              <b-nav-item route to="/acerca">Acerca de</b-nav-item>
+            </b-nav>
+          </nav>
+        </b-sidebar>
 
-    </b-container>
+        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-    <footer class="text-center mt-3">
-      <small>Tarot Reader - 2020 - Rulo Kobashikawa</small>
+        <b-collapse id="nav-collapse" is-nav>
+            <b-navbar-nav>
+                <b-nav-item route to="/"></b-nav-item>
+            </b-navbar-nav>
+            <b-navbar-nav class="ml-auto">
+                <b-nav-item><span></span></b-nav-item>
+            </b-navbar-nav>
+        </b-collapse>
+      </b-navbar>
+    </header>
+
+    <main style="margin-top:64px;">
+        <router-view></router-view>
+    </main>
+
+    <footer>
+        <div class="text-center my-3">
+            <small>Tarot Reader - 2020 - Rulo Kobashikawa</small>
+        </div>
     </footer>
-  </div>`
+  </div>`,
+
 };
 
 export default Component;
