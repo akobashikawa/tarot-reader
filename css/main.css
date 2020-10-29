@@ -1,9 +1,11 @@
-[v-cloak]>* {
-  display: none
+.app-box {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-[v-cloak]::before {
-  content: "♣️♠️♥️♦️"
+.app-box main {
+  flex: 1;
 }
 
 .card-back img.card-img {

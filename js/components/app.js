@@ -9,7 +9,7 @@ const Component = {
   methods: {
   },
 
-  template: `<div>
+  template: `<div class="app-box">
     <header>
       <b-navbar toggleable="lg" type="light" variant="light" fixed="top">
         <b-navbar-brand href="#">
