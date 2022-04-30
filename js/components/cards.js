@@ -37,7 +37,7 @@ const Component = {
         </b-col>
       </b-row>
       <b-row>
-        <b-col md="4" v-for="card of cardsList" style="display: flex;">
+        <b-col md="4" v-for="(card, index) of cardsList" :key="index" style="display: flex;">
           <b-card
             no-body
             class="shadow mt-3"

@@ -8,7 +8,7 @@ const router = new VueRouter({
   routes: [
     { path: '/', name: 'home', component: Home },
     { path: '/cartas', name: 'cards', component: Cards },
-    { path: '/configuracion', name: 'cards', component: Settings },
+    { path: '/configuracion', name: 'settings', component: Settings },
     { path: '/acerca', name: 'about', component: About }
   ]
 });
